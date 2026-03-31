@@ -1,4 +1,4 @@
-from sqlalchemy import Column, Integer, String, Float
+from sqlalchemy import Column, Integer, String, Float, Boolean
 from database import Base
 
 
@@ -14,6 +14,7 @@ class City(Base):
     country = Column(String(255), nullable=False) 
     latitude = Column(Float, nullable=False)
     longitude = Column(Float, nullable=False)
+    is_favorite = Column(Boolean, default=False, nullable=False)
 
     def __repr__(self):
-        return f"<City(id={self.id}, name='{self.name}')>"
+        return f"<City(id={self.id}, name='{self.name}, favourite={self.is_favorite}')>"

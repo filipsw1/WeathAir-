@@ -10,6 +10,7 @@ class CityBase(BaseModel):
     country: str = Field(..., min_length=2, max_length=50, description="Country's name")
     latitude: float = Field(..., ge=-90, le=90)
     longitude: float = Field(..., ge=-180, le=180)
+    is_favorite: bool = Field(False, description="Mark city as favorite")
 
     @field_validator('name')
     @classmethod
@@ -31,6 +32,7 @@ class CityUpdate(BaseModel):
     country: Optional[str] = Field(None, min_length=2, max_length=255)
     latitude: Optional[float] = Field(None, ge=-90, le=90)
     longitude: Optional[float] = Field(None, ge=-180, le=180)
+    is_favorite: Optional[bool] = Field(None)
 
 class CityResponse(CityBase):
     """
@@ -46,6 +48,7 @@ class CityResponse(CityBase):
                 "name" : "Stockholm",
                 "country" : "Sweden",
                 "latitude" : 59.325,
-                "longitude" : 18.05
+                "longitude" : 18.05,
+                "is_favorite" : False
             }
         }
