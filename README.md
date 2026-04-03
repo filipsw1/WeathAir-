@@ -1,24 +1,24 @@
 # WeathAir-
 ## Filip Silversten Wärn
-Fullstack app to check weather and air quality when travelling
+Fullstack app to check weather and air quality 
 
 ## Starta backend
-bash
-cd backend
-pip install -r requirements.txt
-python app.py
+- bash
+- cd backend
+- pip install -r requirements.txt
+- python app.py
 
 ## Starta frontend
-cd frontend
-npm install
-npm run dev
+- cd frontend
+- npm install
+- npm run dev
 
 ## Endpoints
-POST /cities          Used to add a city to your favourites
-GET /cities           Used to get all your favourites
-GET /cities {id}      Used to get a specific city when clicking it from your favourites list
-PUT /cities{id}       Úsed to change the name or give a nickname to a city
-DELETE /cities/{id}   Used to delete a city from your favourites list
+- POST /cities          Used to add a city to your favourites
+- GET /cities           Used to get all your favourites
+- GET /cities {id}      Used to get a specific city when clicking it from your favourites list
+- PUT /cities{id}       Úsed to change the name or give a nickname to a city
+- DELETE /cities/{id}   Used to delete a city from your favourites list
 
 ## Externa API:er
 Open-Meteo Weather API – weather right now and the upcoming 7 days
