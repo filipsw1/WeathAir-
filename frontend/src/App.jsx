@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react"
-import { getCities, deleteCity, createCity } from "./api/cities"
+import { getCities, deleteCity, createCity, getCity } from "./api/cities"
 import { Cloud } from "lucide-react"
 import CityList from "./components/CityList"
 import AddCityForm from "./components/AddCityForm"
@@ -100,7 +100,10 @@ export default function App() {
             {loading && <p className="status-text">Loading...</p>}
             <CityList
               cities={favorites}
-              onSelectCity={(city) => setPreviewCity(city)}
+              onSelectCity={async (city) => {
+                const freshCity = await getCity(city.id)
+                setPreviewCity(freshCity)
+              }}
               onDeleteCity={handleDeleteFavorite}
               onUpdate={handleUpdateCity}
             />
