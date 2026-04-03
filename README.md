@@ -3,16 +3,18 @@
 Fullstack app to check weather and air quality 
 
 ## Starta backend
-- bash
-- cd backend
-- pip install -r requirements.txt
-- python app.py
+```bash
+cd backend
+pip install -r requirements.txt
+python app.py
+```
 
 ## Starta frontend
-- cd frontend
-- npm install
-- npm run dev
-
+```bash
+cd frontend
+npm install
+npm run dev
+```
 ## Endpoints
 - POST /cities          Used to add a city to your favourites
 - GET /cities           Used to get all your favourites
