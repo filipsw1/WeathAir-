@@ -21,10 +21,10 @@ Fullstack app to check weather and air quality
 - DELETE /cities/{id}   Used to delete a city from your favourites list
 
 ## Externa API:er
-Open-Meteo Weather API – weather right now and the upcoming 7 days
-Open-Meteo Air Quality API – AQI, PM2.5 och PM10
-Open-Meteo Geocoding API - for searching cities
-Nominatim – to get current position
+- Open-Meteo Weather API – weather right now and the upcoming 7 days
+- Open-Meteo Air Quality API – AQI, PM2.5 och PM10
+- Open-Meteo Geocoding API - for searching cities
+- Nominatim – to get current position
 
 ## Tech Stack
 Backend: FastAPI, SQLAlchemy, SQLite, Pydantic  
