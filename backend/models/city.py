@@ -15,6 +15,8 @@ class City(Base):
     latitude = Column(Float, nullable=False)
     longitude = Column(Float, nullable=False)
     is_favorite = Column(Boolean, default=False, nullable=False)
+    state       = Column(String(100), nullable=True)     
+    nickname    = Column(String(100), nullable=True)     
 
     def __repr__(self):
         return f"<City(id={self.id}, name='{self.name}, favourite={self.is_favorite}')>"
